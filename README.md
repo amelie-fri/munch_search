@@ -7,7 +7,7 @@ munch_search is a research and exploration tool. The explored data was kindly pr
 
 To get started, please get a copy of this repository on your local drive and make sure the necessary software is installed (see Prerequisites).
 
-Make sure that the Docker image `munch_api` is build and available before starting the containers in this project.  
+Make sure that the Docker image `munch_api` is built and available before starting the containers in this project.  
 Follow the instructions from the following project: [Munch API](https://github.com/amelie-fri/muAPI)
 
 ### `docker-compose up --build`
@@ -19,7 +19,7 @@ This command will build, download and start up the services mentioned in the `do
 This will execute the `load_data.js` file inside the `mp-api` container.
 `load_data.js` has to be executed once in order to build the elasticsearch index. The data is stored in a Docker volume and will be perserved when the containers are stopped.
 
-### [Munch Search](http://localhost:8080)
+### [munch_search](http://localhost:8080)
 
 After the index is built, you are free to explore the collection.
 
