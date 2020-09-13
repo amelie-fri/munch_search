@@ -1,0 +1,192 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("collage.png");
+  background-color: #ffffff;
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center center;
+}
+
+h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 5rem;
+}
+
+h2 {
+  font-family: "Work Sans", sans-serif;
+  font-size: 1.5rem;
+}
+
+div {
+  margin: 5px;
+}
+
+/* style for box in list presentation - works of art */
+.box {
+  margin: 20px;
+  font-family: "Work Sans", sans-serif;
+  background-color: rgba(255, 255, 255, 0.5);
+  break-inside: avoid-column;
+}
+/* emphasises the query term in the highlight */
+em {
+  font-weight: bold;
+}
+/* style for box in list presentation - texts */
+.box2 {
+  margin: 20px;
+  font-family: "Work Sans", sans-serif;
+  background-color: rgba(255, 255, 255, 0.5);
+  break-inside: avoid-column;
+}
+
+/* Style searchbar */
+.searchbar input[type="search"] {
+  padding: 20px;
+  width: 25%;
+  border: none;
+  outline: none;
+  /* margin-top: 8px;
+  margin-right: 16px; */
+  font-size: 17px;
+  /* font-family: "Work Sans", sans-serif; */
+}
+
+.searchbarText input[type="search"] {
+  padding: 20px;
+  width: 50%;
+  border: none;
+  outline: none;
+  /* margin-top: 8px;
+  margin-right: 16px; */
+  font-size: 17px;
+  /* font-family: "Work Sans", sans-serif; */
+}
+
+.searchbar button {
+  background-color: #4caf50; /* Green */
+  border: none;
+  outline: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.searchbarText button {
+  background-color: #4caf50; /* Green */
+  border: none;
+  outline: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+/* style canvas for the timeline visualisation */
+.container canvas {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin: auto;
+  width: 80%;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+/* style canvas for the doughnut visualisation */
+.container2 canvas {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin: auto;
+  width: 80%;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+/* Headlines */
+.toptop {
+  color: black;
+  background-color: rgba(255, 255, 255, 0);
+  padding: 20px;
+  border: 20px solid rgba(155, 81, 224, 0);
+  margin: 20px;
+}
+
+.fatpart {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 900;
+}
+
+/* Style background searchbar */
+.searchbar {
+  color: white;
+  background-color: rgba(155, 81, 224, 0.4);
+  padding: 20px;
+  border: 10px solid rgba(235, 87, 87);
+  margin: 20px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  font-weight: 700;
+}
+/* not used anymore */
+.searchbarText {
+  color: white;
+  background-color: rgba(155, 81, 224, 0.4);
+  padding: 20px;
+  border: 10px solid rgba(235, 87, 87);
+  margin: 20px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  font-weight: 700;
+}
+/* style background timeline */
+.container {
+  background-color: rgba(155, 81, 224, 0.4);
+  padding: 20px;
+  border: 4px solid rgba(235, 87, 87);
+  margin: 20px;
+}
+/* style background doughnut */
+.container2 {
+  background-color: rgba(155, 81, 224, 0.4);
+  padding: 20px;
+  border: 4px solid rgba(235, 87, 87);
+  margin: 20px;
+}
+/* style background list works of art */
+.list {
+  background-color: rgba(255, 185, 246, 0.4);
+  padding: 20px;
+  border: 4px solid #6ff4a1;
+  margin: 20px;
+  column-count: 3;
+  column-gap: 40px;
+}
+/* style background texts */
+.list2 {
+  background-color: rgba(255, 185, 246, 0.4);
+  padding: 20px;
+  border: 4px solid #6ff4a1;
+  margin: 20px;
+  column-count: 3;
+  column-gap: 40px;
+}
+
+/* background image */
+img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}

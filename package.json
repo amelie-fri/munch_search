@@ -1,0 +1,24 @@
+{
+  "name": "munch-search",
+  "version": "0.0.1",
+  "description": "Source code for the Munch Project.",
+  "scripts": {
+    "start": "node server/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amelie-fri/munch_search.git"
+  },
+  "author": "amelie.fritsch@posteo.de",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/amelie-fri/munch-project/issues-commingsoon"
+  },
+  "homepage": "https://github.com/amelie-fri/munch-project#readme-comingsoon",
+  "dependencies": {
+    "@elastic/elasticsearch": "^7.5.1",
+    "axios": "^0.19.2",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.0"
+  }
+}

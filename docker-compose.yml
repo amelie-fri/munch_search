@@ -1,0 +1,86 @@
+# Docker Compose configuration file  for the application stack
+version: "3.7"
+
+services:
+  #
+  #
+  # ---------- Node.js App ----------
+  #
+  api:
+    container_name: mp-api
+    # Build with image defined in Dockerfile
+    build: .
+    # Expose at port 3000
+    ports:
+      - "3000:3000"
+    # Set environmetn variables
+    environment:
+      - NODE_ENV=local
+      - ES_HOST=elasticsearch
+      - FLASK_HOST=munch
+      - PORT=3000
+
+  #
+  #
+  # ---------- Nginx Server - Frontend App ----------
+  #
+  frontend:
+    container_name: mp-frontend
+    image: nginx
+    # Serve local "public" directory - mounted on the container
+    volumes:
+      - ./public:/usr/share/nginx/html
+    # Forward site to localhost:8080
+    ports:
+      - "8080:80"
+
+  #
+  #
+  # ---------- Elasticsearch Instance ----------
+  #
+  elasticsearch:
+    container_name: mp-search
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.5.2
+    # Preserve ES data in seperate "esdata" volume
+    volumes:
+      - esdata:/usr/share/elasticsearch/data
+    # Defined environment variables
+    environment:
+      - discovery.type=single-node
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    # Expose Elasticsearch ports
+    ports:
+      - 9300:9300
+      - 9200:9200
+
+  #
+  #
+  # ---------- Kibana Instance ----------
+  #
+  kibana:
+    container_name: kibana
+    image: docker.elastic.co/kibana/kibana:7.5.2
+    # Definition environment
+    environment:
+      ELASTICSEARCH_URL: "http://elasticsearch:9200"
+    # Exposed port for Kibana
+    ports: ["5601:5601"]
+    depends_on: ["elasticsearch"]
+
+  #
+  #
+  # ---------- Munch-Flask-API ----------
+  #
+  munch:
+    container_name: mp_data
+    # Build with the image defined for the Munch API
+    image: munch_api
+    # Expose the application at port 5000
+    ports:
+      - "5000:5000"
+
+# Define seperate volume for Elasticsearch data
+volumes:
+  esdata:
+    driver: local

@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- refernce to css stylesheet -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- cdn for chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <!-- importing relevant fonts -->
+    <style> @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Work+Sans&display=swap"); </style>
+    <title>munch_search</title> 
+  </head>
+  <body>
+    <div class="parent">
+      <!-- header part: title & searchbar -->
+      <div class="toptop">
+        <h1 style="color: pink;"><span class="fatpart">Munch Museet -</span></h1>
+        <h1> Munch Motif Search</h1></br>
+        
+        <!-- god morgen should be ajdusted to the time of the day :) -->
+        <h2 style="color: #fe390f;">God Morgen! What motif are you looking for?</h2>
+        </p>
+        <div class="searchbar">
+            <p>
+              <label for="site-search">Search the collection:</label>
+              <input type="search" id="site-search" name="q"
+              aria-label="Search Visual Arts Data" placeholder="visual arts">
+              <input type="search" id="search-text" aria-label="Search Text Data" placeholder="texts">
+              <button onclick="updateCharts();">Search</button>
+          </p>
+        </div>
+      </div>  
+      <!-- container for the timline -->
+      <div class="container">
+        </br>
+        </br>
+        <canvas id="Chart"></canvas>
+      </div>
+      <!-- the DOM elements for list are created in sketch.js -->
+      <div id ="list" class="list">
+      </div>
+      <!-- container for the pie chart -->
+      <div class="container2">
+        </br>
+        </br>
+        <canvas id="Chart2" width="700" height="300"></canvas>
+      </div>
+      <!-- the DOM elements for list2 are created in sketch.js -->
+      <div id="list2" class="list2">       
+      </div>
+      <!-- refernce to the JS file with client side JS
+      placed after the canvas, to ensure that JS does not run beofre the HTML is loaded -->
+      <script src="sketch.js"></script>
+    </div>
+  </body>
+</html>
