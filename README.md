@@ -1,38 +1,41 @@
 # Munch Search
 
 munch_search was created as a master's thesis project, in order to explore the digital collection of the MUNCH museum in Oslo. 
-munch_search is a research and exploration tool. The explored data was kindly provided by the MUNCH museum.
+munch_search is a prototype for a research and exploration tool. The explored data was kindly provided by the MUNCH museum.
 
 ## Getting Started
 
-To get started, please get a copy of this repository on your local drive and make sure the necessary software is installed (see Prerequisites).
+To get started, please get a copy of this repository on your local drive and make sure the necessary software is installed (see prerequisites).
 
-Make sure that the Docker image `munch_api` is built and available before starting the containers in this project.  
+Make sure that the Docker image `munch_api` is built and available before starting the containers for this project.  
 Follow the instructions from the following project: [Munch API](https://github.com/amelie-fri/muAPI)
 
 ### `docker-compose up --build`
 
-This command will build, download and start up the services mentioned in the `docker-compose.yml` file
+This command builds, downloads and starts up the services mentioned in the `docker-compose.yml` file
+
 
 ### `docker exec mp-api "node" "server/load_data.js"`
 
-This will execute the `load_data.js` file inside the `mp-api` container.
-`load_data.js` has to be executed once in order to build the elasticsearch index. The data is stored in a Docker volume and will be perserved when the containers are stopped.
+Executes the `load_data.js` file inside the `mp-api` container.
+`load_data.js` has to be executed once in order to build the elasticsearch index. 
+The data is stored in a Docker volume and will be perserved when the containers are stopped.
+
 
 ### [munch_search](http://localhost:8080)
 
 After the index is built, you are free to explore the collection.
 
-The front end of the application is available on  
-`http://localhost:80` and is exposed to `http://localhost:8080`
+The front end of the application is available on:  
+`http://localhost:8080`
+
 
 ### Additional instances
-
-The additional server-side instances
+The additional server side instances
 
 #### Elasticsearch
 
-ElasticSearch Instance is available on:  
+The ElasticSearch instance is available on:  
 `http://localhost:9200`
 
 #### Node.js
@@ -50,9 +53,10 @@ The Munch API is available on:
 In addition, a kibana instance is connected to the elasticsearch instance and is available on:  
 `http://localhost:5601`
 
+
 ### Prerequisites
 
-Docker necessary in order to use this project. Docker is available from:  
+The installation of Docker is necessary in order to use the application. Docker is available here: 
 https://www.docker.com/get-started
 
 ## License
@@ -63,7 +67,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 **Amelie Fritsch** - https://github.com/amelie-fri
 
-Project Link: https://github.com/your_username/repo_name
+Project Link: https://github.com/amelie-fri/munch_search
 
 ## Images provided by the MUNCH that were used for the background image of the application
 
