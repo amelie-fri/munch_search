@@ -18,7 +18,7 @@ This command builds, downloads and starts up the services mentioned in the `dock
 ### `docker exec mp-api "node" "server/load_data.js"`
 
 Executes the `load_data.js` file inside the `mp-api` container.
-`load_data.js` has to be executed once in order to build the elasticsearch index. 
+`load_data.js` has to be executed once in order to build the ElasticSearch index. 
 The data is stored in a Docker volume and will be perserved when the containers are stopped.
 
 
@@ -50,7 +50,7 @@ The Munch API is available on:
 
 #### Kibana
 
-In addition, a kibana instance is connected to the elasticsearch instance and is available on:  
+In addition, a Kibana instance is connected to the ElasticSearch instance and is available on:  
 `http://localhost:5601`
 
 
