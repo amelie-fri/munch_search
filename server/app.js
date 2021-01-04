@@ -48,14 +48,14 @@ app.get("/search", async (request, response, next) => {
 app.get("/munch/malerier/:tekst", async (request, response) => {
   const tekst = request.params.tekst;
   // Fetch from munchmuseet.no
-  const json = await munchEndpoints(tekst, "5014-Malerier");
+  const json = await munchEndpoints(tekst, "5026-Malerier");
   response.json(json);
 });
 // Grafikk Endpoint
 app.get("/munch/grafikk/:tekst", async (request, response) => {
   const tekst = request.params.tekst;
   // Fetch from munchmuseet.no
-  const json = await munchEndpoints(tekst, "5018-Grafikk");
+  const json = await munchEndpoints(tekst, "5011-Grafikk");
   console.log(json);
   response.json(json);
 });
@@ -63,28 +63,28 @@ app.get("/munch/grafikk/:tekst", async (request, response) => {
 app.get("/munch/tegninger/:tekst", async (request, response) => {
   const tekst = request.params.tekst;
   // Fetch from munchmuseet.no
-  const json = await munchEndpoints(tekst, "5016-Tegninger");
+  const json = await munchEndpoints(tekst, "5020-Tegninger");
   response.json(json);
 });
 // Skulpturer Endpoint
 app.get("/munch/skulpturer/:tekst", async (request, response) => {
   const tekst = request.params.tekst;
   // Fetch from munchmuseet.no
-  const json = await munchEndpoints(tekst, "5051-Skulpturer");
+  const json = await munchEndpoints(tekst, "5018-Skulpturer");
   response.json(json);
 });
 // Fotografi Endpoint
 app.get("/munch/fotografi/:tekst", async (request, response) => {
   const tekst = request.params.tekst;
   // Fetch from munchmuseet.no
-  const json = await munchEndpoints(tekst, "5020-Fotografi");
+  const json = await munchEndpoints(tekst, "5010-Fotografi");
   response.json(json);
 });
 // Dokumentarfoto Endpoint
 app.get("/munch/dokumentarfoto/:tekst", async (request, response) => {
   const tekst = request.params.tekst;
   // Fetch from munchmuseet.no
-  const json = await munchEndpoints(tekst, "5022-Dokumentarfoto");
+  const json = await munchEndpoints(tekst, "5005-Dokumentarfoto");
   response.json(json);
 });
 

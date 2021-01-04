@@ -80,7 +80,8 @@ async function getDataVisual() {
         console.log(error);
       });
     // the JSON from the response is stored in the json object of each art collection
-    console.log("hits: " + json.data.length);
+    // console.log("hits: " + json.data.length);
+    console.log(json);
     artDataArray[i].json = json;
   }
   // Preparing the data requierd for making the Timeline Chart
