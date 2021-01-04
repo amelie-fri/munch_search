@@ -1,7 +1,7 @@
 # Munch Search
 
 munch_search was created as a master's thesis project, in order to explore the digital collection of the MUNCH museum in Oslo. 
-munch_search is a prototype for a research and exploration tool. The explored data was kindly provided by the MUNCH museum.
+munch_search is a prototype of a research and exploration tool. The explored data was kindly provided by the MUNCH museum.
 
 ## Getting Started
 
